@@ -7,11 +7,13 @@
             "android"
         ],
         "plugins": {
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-ad-chartboost": {}
         }
     },
     "dependencies": {
         "cordova-android": "~6.2.3",
+        "cordova-plugin-ad-chartboost": "^1.0.83",
         "cordova-plugin-whitelist": "^1.3.2"
     }
 }
