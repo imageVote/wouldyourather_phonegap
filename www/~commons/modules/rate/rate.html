@@ -1,0 +1,241 @@
+<style>
+
+    #rate{
+        display: inline-block;
+        cursor: default;
+        width: 95%;
+    }
+
+    #rate p{
+        font-size: 18px;
+    }
+
+    #rate i {
+        font-size: 50px;
+        padding: 0 1px;
+        cursor: pointer;
+        color: #5f5f5f;
+    }
+
+    #rate .fa-star{
+        color: #0f9d58;
+    }
+
+    #rate .comment{
+        color: rgb(50,50,50);
+        font-size: 14px;
+    }
+    #rate .rate_buttons{
+        margin: 0 15px;
+    }
+    #rate .rate_buttons button{
+        font-size: 12px;
+    }
+
+    #rate .disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    #rate_message input{
+        width:100%;
+        background: transparent;
+        border: none;
+        box-shadow: inset 0 -1px rgb(180,180,180);
+        outline: none;
+        height: inherit;
+        line-height: 0;
+        font-size: 14px;
+    }
+    #rate_message input:hover, #rate_message input:focus{
+        box-shadow: inset 0 -2px #0f9d58;
+    }
+    #rate_message button{
+        font-size: 13px;
+    }
+
+    /*MIN WIDTH*/
+    #rate #rate_SUBMITLATER, #rate #rate_NOSUBMIT{
+        min-width: inherit !important;  
+        font-weight: normal;
+        color: rgb(90,90,90);
+    }
+    #rate #rate_SUBMIT{
+        background: rgb(200,200,200);
+    }
+
+</style>
+
+<div id="rate" style="display:none">
+    <p data-lang="rate_title"></p>
+    <br>
+    <div class="rate_container">
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <br>
+    <span class="comment"></span>
+    <br><br><br>
+    <div class="rate_buttons">
+        <button id="rate_SUBMITLATER" data-lang="rate_SUBMITLATER" style="float:left"></button>
+        <div class="right" style="float:right">
+            <button id="rate_NOSUBMIT" data-lang="rate_NOSUBMIT" style="margin-right:5px; float:left"></button>
+            <button id="rate_SUBMIT" data-lang="rate_SUBMIT" class="disabled" style="float:right"></button>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var Rate = function (debug) {
+        if (!debug) {
+            var rate = localStorage.getItem("rate");
+            if ("done" == rate) {
+                console.log("already rated");
+                return;
+            }
+        }
+        console.log("RATE");
+
+        var _this = this;
+        translate.loadLanguage("~commons/modules/rate/", "#rate", function () {
+            var dom = $("#rate");
+            _this.modal = modalBox.modal(dom);
+            _this.events();
+
+            //FORCE ASK TWICE TO VOTE
+            if (!rate) {
+                $("#rate #rate_SUBMITLATER").hide();
+                $("#rate .right").css({
+                    float: "none",
+                    margin: "0 40px"
+                });
+            }
+            dom.show();
+        });
+    };
+
+    Rate.prototype.events = function () {
+        var _this = this;
+
+        $("#rate .rate_container").off(".stars_out").on("mouseleave.stars_out", function () {
+            $("#rate i").removeClass("fa-star").addClass("fa-star-o");
+            $("#rate .selected").removeClass("fa-star-o").addClass("fa-star");
+
+            $("#rate .comment").text("");
+            if (_this.index) {
+                $("#rate .comment").text(transl("rate_star" + _this.index));
+            }
+        });
+
+        $("#rate i").off(".stars_hover").on("mouseover.stars_hover", function () {
+            $("#rate i").removeClass("fa-star").addClass("fa-star-o");
+
+            var index = $(this).index() + 1;
+            for (var i = 0; i < index; i++) {
+                var star = $("#rate i")[i];
+                $(star).removeClass("fa-star-o").addClass("fa-star");
+            }
+
+            $("#rate .comment").text(transl("rate_star" + i));
+        });
+
+        $("#rate i").off(".stars").on("click.stars", function () {
+            $("#rate i").removeClass("fa-star selected").addClass("fa-star-o");
+
+            _this.index = $(this).index() + 1;
+            for (var i = 0; i < _this.index; i++) {
+                var star = $("#rate i")[i];
+                $(star).removeClass("fa-star-o").addClass("fa-star selected");
+            }
+
+            $("#rate .comment").text(transl("rate_star" + i));
+            $("#rate .disabled").removeClass("disabled");
+        });
+
+        $("#rate #rate_SUBMIT").click(function () {
+            localStorage.setItem("rate", "done");
+
+            if (!_this.index) {
+                return;
+            }
+            if (_this.index == 5) { //rates of 4 decreases overall!
+                modalBox.remove(_this.modal);
+                setTimeout(function () {
+                    if (Device.rate) {
+                        Device.rate();
+                        return;
+                    }
+
+                    if (window.isAndroid) {
+                        //location.href = "market://details?id=" + settings.app_package;
+                        window.open("http://play.google.com/store/apps/details?id=" + settings.app_package); //not work properly :(
+                    } else if (window.iPhone) {
+                        //http://stackoverflow.com/questions/3124080/app-store-link-for-rate-review-this-app
+                        window.open("itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1226455878&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software&action=write-review");
+                    } else {
+                        console.log("ERROR URL RATING!?");
+                    }
+
+                }, 200);
+
+            } else {
+                _this.message(_this.index);
+            }
+        });
+
+        $("#rate #rate_NOSUBMIT").click(function () {
+            if (localStorage.getItem("rate")) {
+                localStorage.setItem("rate", "done");
+            } else {
+                localStorage.setItem("rate", "later");
+            }
+            modalBox.remove(_this.modal);
+        });
+        $("#rate #rate_SUBMITLATER").click(function () {
+            modalBox.remove(_this.modal);
+        });
+    };
+
+    Rate.prototype.message = function (stars) {
+        var _this = this;
+//        modalBox.input(transl("rate_messageTitle"), null, function () {
+//            flash(transl("rate_thanks"));
+//            //TODO: send bad rate message
+//        }, "rate_FINISH");
+        modalBox.remove(this.modal);
+
+        var $message_dom = $("<div id='rate_message'>"
+                + "<span style='line-height:50px; font-size: 18px;'>" + transl("rate_messageTitle") + "</span>"
+                + "<br><br>"
+                + "<input type='text' placeholder='" + transl("rate_placeholder") + "'>"
+                + "<br><br><br><br>"
+                + "<button>" + transl("rate_FINISH") + "</button>"
+                + "</div>");
+        var modal = modalBox.modal($message_dom);
+        $message_dom.find("input").focus();
+        $message_dom.find("button").click(function () {
+            _this.send(stars);
+            modalBox.remove(modal);
+            flash(transl("rate_thanks"));
+        });
+    };
+
+    Rate.prototype.send = function (stars) {
+        var file = "sendmail.php";
+        var params = {
+            title: stars,
+            msg: $("#rate_message input").val()
+        };
+
+        if (Device.simpleRequest) {
+            Device.simpleRequest(file, params);
+        } else {
+            $.post("core/" + file, params);
+        }
+    };
+
+</script>
