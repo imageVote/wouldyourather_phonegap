@@ -1,0 +1,19 @@
+{
+  "name" : "test",
+  "version": "0.1",
+  "dependencies" : {
+    "jquery-ui" : "latest"
+  },
+  "install" : {
+    "path" : {
+      "css": "src/css",
+      "js": "src/js"
+    },
+    "sources" : {
+      "jquery-ui" : [
+        "components/jquery-ui/ui/jquery-ui.custom.js",
+        "components/jquery-ui/themes/start/jquery-ui.css"
+      ]
+    }
+  }
+}
