@@ -1,0 +1,57 @@
+
+<div>
+    <p>
+        <b data-lang="Welcome"></b>
+    </p> 
+    <p class="text" data-lang="rules"></p> 
+</div>
+<button id="firstOk" data-lang="firstOk"></button>
+<!--pretty sure nobody starts first time to make poll !-->
+<!--<button id="firstCreate" style="float: right" data-lang="MakeNew"></button>-->
+
+<script>
+
+    (function () {
+        //from DEVICE (not loadHash direcly cose needs check "needPermission" value)
+        if (window.firstTimeStarted) {
+            console.log("firstTimeStarted");
+            hashManager.update("home");
+            return;
+        }
+
+        window.firstTimeStarted = true;
+        $("html").addClass("firstTime");
+
+        //allow change hash event
+        hashManager.update("firstTime");
+
+        //not ask for permission on start app, is agressive
+        if (window.needPermission) {
+            $("#firstTime .text").removeAttr("data-lang");
+            var allowText = transl("AllowAppServices");
+            $("#firstTime .text").html(allowText);
+
+            $("#firstTime").append('<br><br/><br/>'
+                    + '<small style="color:grey">'
+                    + transl("whyNeedServicesPermission")
+                    + '</small>');
+            $("#firstOk").text(transl("Activate"));
+        }
+
+        //first time app
+        $("#firstOk").click(function () {
+            if (Device.firstTimeOk) {
+                Device.firstTimeOk();
+            } else {
+                hashManager.update("home");
+            }
+        });
+
+        $("#firstCreate").click(function () {
+            hashManager.update("home");
+        });
+
+        translate.translateTags();
+    })();
+
+</script>

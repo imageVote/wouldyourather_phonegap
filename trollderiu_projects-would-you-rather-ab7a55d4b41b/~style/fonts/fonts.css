@@ -1,0 +1,31 @@
+
+/*http://stackoverflow.com/questions/3698319/css-font-face-what-does-src-local-mean*/
+
+/*@font-face {
+    font-family: "LeagueGothic";
+    src: url(fonts/league-gothic.regular.ttf) format("opentype");
+}*/
+@font-face {
+    font-family: 'LeagueGothic';
+    /*url('leaguegothic-regular-webfont.woff2') format('woff2'),*/
+    src: url('leaguegothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Anton";
+    src: url(Anton.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Oswald_Bold";
+    src: url(Oswald-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Oswald_Regular";
+    src: url(Oswald-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Hand";
+    src: url(give-you-glory.regular.ttf) format("truetype");
+}

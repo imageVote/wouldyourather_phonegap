@@ -1,0 +1,139 @@
+
+<title>Would You Rather? The Game</title>
+
+<!-- for Google -->
+<meta name="description" content="Play the ultimate and multilanguage Would You Rather game and start sharing questions with your friends in Whatsapp,Facebook or any other social network!  you can also create videos gameplay for Youtube!">
+<meta name="keywords" content="would you rather,friends,poll,encuesta,android,ios,Twitter,WhatsApp,Facebook">
+
+<!--<meta name="copyright" content="" />-->
+<meta name="application-name" content="" />
+
+<!-- for FACEBOOK -->
+<meta property="fb:app_id" content="966242223397117" />
+<meta property="og:title" content="wouldyourather.co | your polls tool" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="http://wouldyourather.co/~img/meta_image.png" />
+
+<meta property="og:url" content="http://wouldyourather.co/" />
+<meta property="og:description" content="Create polls throught Twitter, WhatsApp, Facebook or any other social network!" />
+
+<link rel="stylesheet" type="text/css" href="~votation/votation.css">
+<link rel="stylesheet" type="text/css" href="~style/fonts/fonts.css">
+<link rel="stylesheet" type="text/css" href="~style/index.css">
+
+<!--<script type="text/javascript" src="~modules/welcome/welcome.js"></script>-->
+
+<div id="mainPageContainer">
+    <div id="mainPage">
+
+        <div id="creator">
+            <!--<div class="creator_title">Would you Rather</div>-->
+            <span data-lang="createPoll" id="createPoll"></span>
+            <div class="votationBox votation"></div>
+            <div class="buttons">
+                <div class="votationButtons" style="text-align: right"></div>
+            </div>
+        </div>
+
+        <div id="users">
+            <div class="list"></div>
+            <div style="text-align: right">
+                <button onclick="backVotation()" data-lang="Return"></button>
+            </div>
+        </div>
+
+        <div id="votation">
+            <div class="creator_title" data-lang="Title"></div>
+            <div class="votationBox votation"></div>
+            <div class="buttons">
+                <div class="votationButtons" style="text-align: right"></div>
+            </div>
+        </div>
+
+        <div id="stored" class='hidden'>
+            <hr/>
+            <div data-lang="VotedPolls"></div>
+            <div class="right" data-lang="swipeToRemove"></div>
+            <div class="list"></div>
+        </div>
+
+        <div id="showPolls" class="dashedButton" data-lang="showYourPolls"></div>
+
+    </div>
+</div>
+
+<div id="pollsPageContainer">
+    <div id="pollsPage"></div>
+</div>
+
+<script>
+
+//    WebFontConfig = {
+//        custom: {
+//            families: ['Hand'],
+//            urls: ['~style/fonts/fonts.css']
+//        }
+//    };
+
+    //require    
+//    if (location.hostname == "localhost") {
+    define("custom_dependencies", [
+        "~js/FillTable.js",
+        "~js/DrawPoll.js",
+        "~js/Styles.js",
+        "~js/OptionResize.js",
+        "~js/events.js",
+        "font!custom,families:[LeagueGothic,Hand],urls[~style/fonts/fonts.css]"
+    ]);
+//    } else {
+//        define("custom_dependencies", ["~js/custom.min.js"]);
+//    }
+
+    require([
+        "custom_dependencies"
+    ], function () {
+        console.log("custom_dependencies done");
+
+        //custom settings
+        settings.appName = "Would you Rather";
+        settings.app_package = "at.wouldyourather";
+        //settings.androidURL = "https://play.google.com/store/apps/details?id=" + settings.app_package;
+        settings.androidURL = "https://play.google.com/store/apps/details?id=at.wouldyourather&referrer=utm_source=sharing";
+        settings.iosURL = "https://itunes.apple.com/us/app/would-you-rather-friends/id1226455878";
+        settings.imagesURL = "images.would-you-rather.tk";
+//        settings.load("wouldyourather.co");
+        settings.load("wouldyourather.co", "would-you-rather-core.tk");
+        if("localhost" === location.host){
+            settings.load("localhost/wouldyourather", "localhost/wouldyourather");
+        }
+
+        //classes init
+        window.styles = new Styles(); //default styles needed
+
+        $('<div id="polls_custom">').appendTo("body").load('~modules/polls/polls.html');
+
+        var td = $("<td id='language_icon'>");
+        td.load("~commons/modules/language/language.html");
+        $("#search .title").after(td);
+
+        var user_tutorial = localStorage.getItem("userTutorial");
+        //tutorial only on App (not on sharing url!)
+        if (window.Device && !user_tutorial) {
+            localStorage.setItem("userTutorial", "done");
+            $("<div>").appendTo("body").load("~modules/tutorial/tutorial_custom.html");
+        }
+
+        //$("#pollsHeader").load("~commons/modules/search/search.html");
+
+        //DEBUG //WARN: if not localhost, PREMIUM code -> loads home in bucle!
+        if (window.localhost) {
+            $('#premium').remove();
+            $('body').append($('<div id="premium">').load('~modules/premium/premium_custom.html'));
+            //on localhost not have this file
+        }
+
+        //reload events:
+        window.events.homeEvents();
+    });
+
+</script>

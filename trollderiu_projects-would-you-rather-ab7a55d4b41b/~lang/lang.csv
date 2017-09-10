@@ -1,0 +1,143 @@
+;EN;ES;PT;IT;FR;DE
+Title; Would you Rather;Would you Rather; Would you Rather; Would you Rather; Would you Rather; Would you Rather
+;;;;;;
+//general;;;;;;
+installApp;Use the App to share this poll!;Usa la App para compartir la encuesta!;Use o App para compartilhar esta enquete!;Utilizzare l'applicazione per condividere questo sondaggio!;Utilisez l'application pour partager ce sondage!;Verwenden Sie die App diese Umfrage zu teilen!
+installAppComments;Download it free.;Descárgala completamente gratis.;Baixá-lo gratuitamente.;Scaricalo gratis.;Téléchargez gratuitement.;Laden Sie es kostenlos.
+haveApp;I've the App!;Tengo la App!;Eu tenho o app!;Ho l'App!;J'ai l'App!;Ich habe die App!
+;;;;;;
+//vote;;;;;;
+SecondPageButton;Play;Jugar;jogar;giocare;jouer;spielen
+Welcome;Hi, welcome to;Hola, bienvenido a la APP de;Oi, bem-vindo ao;Ciao, benvenuto su;Salut, bienvenue à;Hallo, willkommen zu
+rules;1. Click on link to load votation<br/> 2. Select your vote <br/> 3. Share an updated image to anyone!;1. Haz click en el link para cargar la votación<br/>  2. Selecciona una opción<br/> 3. Comparte la imagen actualizada donde quieras!;1. Clique no link para carregar votation <br/> 2. Selecione seu voto <br/> 3. Compartilhar uma imagem atualizada a ninguém!;1. Fare clic sul collegamento per caricare votazione <br/> 2. Selezionare il vostro voto <br/> 3. Condividi un'immagine aggiornata a chiunque!;1. Cliquez sur le lien pour charger <br/> 2. Sélectionnez votation votre vote <br/> 3. Partager une mise à jour de l'image à tout le monde!;1. Klicken Sie auf den Link zu laden votation <br/> 2. Wählen Sie Ihre Stimme <br/> 3. Teile ein aktualisiertes Bild zu jedermann!
+MakeNew;New Poll;Nueva Encuesta;nova votação;Nuovo Sondaggio;nouveau sondage;neue Umfrage
+Create;Create;Crear;criar;creare;créer;schaffen
+VotedPolls;Voted polls:;Encuestas votadas:;urnas votaram:;sondaggi votato:;sondages Voté:;Voted Umfragen:
+swipeToRemove;swipe to remove;desplaza las encuestas para descartar;Deslize para remover;Swipe per rimuovere;Balayer pour enlever;Swipe zu entfernen
+showYourPolls;show your polls;mostrar mis encuestas;mostrar suas votações;mostrare i tuoi sondaggi;montrer vos sondages;zeigen Sie Ihre Umfragen
+back_symbol;<;<;<;<;<;<
+next_symbol;>;>;>;>;>;>
+Back;Back;Volver;de volta;indietro;arrière;zurück
+Share+;Share+;Compartir+;Compartilhar +;Condividi +;Partager +;share +
+Share;Share;Compartir;ação;quota;part;Aktie
+Save;Save;Guardar;Guardar;Salva;Enregistrer;Speichern
+Voters;Voters;Votantes;eleitores;Gli elettori;Les électeurs;Die Wähler
+Cancel;Back;Volver;de volta;indietro;arrière;zurück
+needsPhone;To preceed to vote on public polls we prevent bots sending you a SMS to your phone number;Para realizar votaciones públicas prevenimos el uso de robots enviándole un SMS a su número de teléfono;Para preceder a votar em enquetes públicas podemos evitar bots lhe enviando um SMS para o seu número de telefone;Per precedere a votare i sondaggi pubblici impediamo bot invio di uno SMS al numero di telefono;Pour voter sur précédera les sondages publics nous empêchons bots vous envoyant un SMS à votre numéro de téléphone;Um vorausgehen über öffentliche Umfragen abstimmen wir Bots Senden Sie eine SMS an Ihre Telefonnummer verhindern
+needsPhoneComment;This identification is provided by the development suite of twitter auth and this app will encrypt your phone number.;Este método de identificación viene proporcionado por la suite de desarrollo de twitter y la aplicación creará un token con su número de teléfono.;Esta identificação é fornecida pelo conjunto de desenvolvimento de auth Twitter e este aplicativo irá criptografar seu número de telefone.;Questa identificazione è fornita dalla suite di sviluppo di Twitter auth e questa applicazione sarà cifrare il numero di telefono.;Cette identification est fournie par la suite de développement de twitter auth et cette application va crypter votre numéro de téléphone.;Diese Identifikation wird durch die Entwicklung Suite von twitter Auth zur Verfügung gestellt und diese App wird Ihre Telefonnummer verschlüsseln.
+multipleChoice;Let to vote on multiple options.;Permite votar más de una opción.;Vamos votar em várias opções.;Lasciate a votare su più opzioni.;Laissez voter sur plusieurs options.;Lassen Sie auf mehreren Optionen wählen.
+onlyDevice;Only allow votes from the App.;Solo permitir votos desde la App.;Só permitem votos do App.;Consenti solo voto da App.;Autoriser seulement les votes de l'App.;Nur erlauben Stimmen aus der App.
+openVotes;Open votes;Votaciones abiertas;abertas votos;voto palese;Ouvrez votes;Öffnen Stimmen
+firstOk;Ok;Ok;ok;bene;bien;ok
+Activate;Activate;Activar;ativar;attivare;activer;aktivieren
+downloadAppStore;Install the app and share!;Descarga la aplicación y comparte!;Instale o aplicativo e compartilhar!;Installare l'applicazione e condividere!;Installez l'application et partager!;Installieren Sie die App und teilen!
+createPoll;Share a poll wherever you want:;Comparte una encuesta donde quieras:;Compartilhe para onde quiser sondagem:;Condividi a dove vuoi sondaggio:;Partager où vous voulez sondage:;Teilen Sie, wohin Sie wollen Umfrage:
+;;;;;;
+//~vote placeholders;;;;;;
+QuestionPlaceholder;Write here the question, include extra info on other line.;Escribe aquí la pregunta, incluye información extra en la siguiente linea.;Escreva aqui a questão, Extra incluem informações sobre outra linha.;Scrivi qui la questione, extra includono informazioni altra linea.;Ecrivez ici la question, Extra comprennent info sur une autre ligne.;Schreiben Sie hier die Frage, Extra enthalten Informationen über andere Linie.
+OptionsPlaceholder;Put every option on a different line.;Pon cada opción en una linea diferente.;Coloque cada opção em uma linha diferente.;Mettere ogni opzione su una linea diversa.;Mettez toutes les options sur une autre ligne.;Setzen Sie alle Optionen auf einer anderen Leitung.
+UsernamePlaceholder;Your name (optional);Tu nombre (opcional);O seu nome (opcional);Il tuo nome (opzionale);Votre nom (facultatif);Ihr Name (optional)
+;;;;;;
+//~vote js;;;;;;
+PublicOnlyFromApp;To vote on public polls you need to use the <u>APP</u>;Para votar encuestas públicas necesitas usar la <u>APP</u>;Para votar em enquetes públicas que você precisa para usar o <u> APP </u>;Per votare in sondaggi pubblici è necessario utilizzare il <u> APP </u>;Pour voter sur les sondages publics, vous devez utiliser la <u> APP </u>;Um abzustimmen, über öffentliche Umfragen müssen Sie die <u> APP </u>
+PollOnlyAvailableIn;This poll is only available in ; - Esta encuesta solo está disponible en ;Esta pesquisa está disponível apenas no;Questo sondaggio è disponibile solo in;Ce sondage est seulement disponible en;Diese Umfrage ist nur in
+AllowAppServices;Please, <b>improve</b> your user experience allowing <b>'usage access'</b>.;Por favor, <b>mejora</b> tu experiencia de usuario autorizando <b>'acceso a usos'</b>.;Por favor, <b> Melhorar </b> a sua experiência do usuário Permitir <b> 'acesso de uso' </b>.;Si prega, <b> Migliorare </b> la tua esperienza utente Consentire <b> 'accesso utilizzo' </b>.;S'il vous plaît, <b> Améliorer </b> votre expérience utilisateur Autoriser <b> 'accès d'utilisation' </b>.;Bitte, <b> verbessern </b> Ihre Benutzererfahrung Zulassen <b> 'Verwendung access' </b>.
+whyNeedServicesPermission;why need this?<br/> Since Lollipop 5.0 android version, is needed a special permission to read apps usage. We need this to improve implementation with other social apps.;porque es necesario esto?<br/> Desde la versión android 5.0 Lollipop, es necesario un permiso especial para leer el uso de aplicaciones. Necesitamos esta información para mejorar la implementación con otras aplicaciones sociales.;por que preciso disso? <br/> Android 5.0 Lollipop Desde a versão, uma permissão especial é necessário para ler o meu uso. Precisamos desta Implementação melhorar com outros aplicativos sociais.;perché bisogno di questo? <br/> Android 5.0 Lollipop A partire dalla versione, un permesso speciale è necessaria per leggere il mio utilizzo. Abbiamo bisogno di questa implementazione a migliorare con altre applicazioni sociali.;pourquoi besoin? <br/> Android 5.0 Lollipop Depuis la version, une autorisation spéciale est nécessaire pour lire mon utilisation. Nous en avons besoin pour améliorer la mise en œuvre avec d'autres applications sociales.;warum diese benötigen? <br/> Android 5.0 Lollipop Seit Version eine spezielle Genehmigung erforderlich ist meine Nutzung zu lesen. Wir brauchen diese Umsetzung zu verbessern, mit anderen sozialen Apps.
+votationNotExists;votation not exists;    la votación no existe;votation NÃO EXISTE;votation NON ESISTE;EXISTE PAS votation;votation NICHT VORHANDEN
+votationNotSaved;can't connect to server: votation wasn't saved;no puede conectarse con el servidor: la votación no ha sido guardada;Não é possível conectar ao servidor: votation não foi salvo;Impossibile connettersi al server: votazione non è stata salvata;Impossible de se connecter au serveur: n'a pas été enregistré votation;Kann keine Verbindung zum Server: votation wurde nicht gespeichert
+waitingKey;making democracy..;haciendo democracia..;Fazendo a democracia ..;Fare democrazia ..;Faire la démocratie ..;Herstellung Demokratie ..
+waitingKeyExpired;Error saving poll. Try again..;Error al guardar la encuesta. Prueba otra vez..;economizando poll erro. Tente de novo ..;Errore durante il salvataggio sondaggio. Prova di nuovo ..;Erreur sondage sauver. Réessayez ..;Fehler beim Speichern der Umfrage. Versuchen Sie es erneut ..
+onlyMostVotedShows;by default only the 4 most voted options are displayed in the shared image.;por defecto solo las 4 opciones más votadas se mostrarán en la imagen compartida.;por padrão, apenas as 4 opções mais votadas são exibidos na imagem compartilhada.;Per impostazione predefinita, solo le 4 opzioni più votato vengono visualizzati nell'immagine condivisa.;par défaut, seuls les 4 options les plus votés sont affichés dans l'image partagée.;Standardmäßig wird nur die 4 die meisten Stimmen Optionen werden im gemeinsamen Bild angezeigt.
+hidePolls;hide polls;ocultar encuestas;esconder urnas;nascondere sondaggi;cacher les sondages;verstecken Umfragen
+notPublicUsers;no names of voters;no hay nombres de votantes;há nomes de eleitores;non nomi di elettori;aucun nom des électeurs;keine Namen der Wähler
+missingAjaxKey;timeout on requesting poll key, please check your internet connection.;Aún no se ha recibido un código para la nueva encuesta. Por favor, comprueba que estás conectado a internet.;Solicitando enquete no tempo limite de chave, por favor, verifique sua conexão de internet.;Richiesta di sondaggio su timeout chiave, Si prega di verificare la connessione a Internet.;Demande de sondage sur un time-out, S'il vous plaît vérifier votre connexion Internet.;Anfordern Umfrage auf Schlüssel Timeout Bitte überprüfen Sie Ihre Internetverbindung.
+more;more;más;mais;più;plus;mehr
+min1Option;put at least 1 option;pon al menos 1 opción;Pelo menos, colocar uma opção;Almeno un'opzione put;Au moins une option de vente;Mindestens eine Put-Option
+min2Options;option can't be empty;no pueden haber opciones vacías;opção não pode estar vazio;opzione non può essere vuoto;option ne peut pas être vide;Option kann nicht leer sein
+duplicatedOptions;duplicated options!;opciones duplicadas!;opções duplicados!;Opzioni duplicati!;Options dupliqués!;Duplizierte Optionen
+myName;Enter a nickname;Ponte un nombre!;Digitar um apelido;Inserisci un nickname;Entrez un pseudonyme;Geben Sie einen Spitznamen
+requiredName;Enter your name (required);Introduce un nombre (obligatorio);Digite seu nome (necessária);Inserisci il tuo nome (richiesto);Entrez votre nom (obligatoire);Geben Sie Ihren Namen (erforderlich)
+privateNeedUserName;Add your name is required (private polls only);Es necesario que introduzcas tu nombre (solo encuestas privadas);Adicione seu nome é necessária (pesquisas particulares somente);ADD è richiesto il tuo nome (sondaggi private solo);Ajoutez votre nom est requis (sondages privés);Fügen Sie Ihren Namen erforderlich (privat Umfragen nur)
+unknown;unknown;desconocidos;desconhecido;sconosciuto;inconnu;unbekannt
+browser;browser;navegador;navegador;del browser;navigateur;Browser
+notInApp;Use the App to forward the poll.;Usa la App para reenviar la encuesta.;Use o App para encaminhar a votação.;Utilizzare l'applicazione per inoltrare il sondaggio.;Utilisez l'application pour transmettre le sondage.;Verwenden Sie die App die Umfrage zu übermitteln.
+;;;;;;
+//~vote ERRORS;;;;;;
+error;error;error;erro;errore;erreur;Fehler
+errorAjaxResponse;error on retrieve ajax response;error al recibir la respuesta ajax;Erro em obter resposta ajax;Errore di recuperare risposta ajax;Erreur lors de la récupération réponse ajax;Fehler beim Abrufen von Ajax-Antwort
+votationNotFound;votation not found.;votación no encontrada.;votation não encontrado.;votazione non trovato.;pas trouvé votation.;votation nicht gefunden.
+WrongCountry;You aren't in located in ;No estas localizado en ;Você não está na localizado na;Non si trova in a;Vous n'êtes pas dans situé dans;Sie sind nicht in Lage in
+notValidUserId;not valid user id;id de usuario no válido;não é válido ID de usuário;Non valida user id;pas un ID utilisateur;nicht gültige Benutzer-ID
+notLoadingPolls;error loading polls;error al descargar las encuestas;enquetes Erro ao carregar;Errore durante il caricamento sondaggi;sondages d'erreur de chargement;Fehler beim Laden Umfragen
+warnNotPublic;warn: this poll is private and don't validates voters, so isn't valid for public votations;aviso: esta encuesta es privada y no valida a los usuarios, por lo que no es válida para votaciones públicas;WARN: esta sondagem é privado e não valida os eleitores, por isso não é válido para votações públicas;AVVISO: questo sondaggio è privato e non convalida elettori, quindi non è valida per votazioni pubbliche;WARN: ce sondage est privé et ne valident pas les électeurs, est donc pas valable pour les votations publiques;WARN: Diese Umfrage ist privat und nicht die Wähler validiert, so dass für die öffentlichen votations nicht gültig
+e_noDataReceived;no data retrieved;no se han recibido datos;há dados recuperados;non ci sono dati recuperati;aucune donnée récupérées;keine Daten abgerufen
+e_phoneValidationNotWork;Troubles to make SMS verification work? Please if so contact us.;Problemas para hacer funcionar la verificación a través de SMS? Por favor si es así contacta con nosotros.;Problemas para fazer o trabalho de verificação por SMS? Entre em contato conosco se assim.;Problemi per rendere il lavoro di verifica SMS? Vi preghiamo di contattarci in caso affermativo.;Troubles de faire le travail de vérification par SMS? S'il vous plaît nous contacter si oui.;Troubles zu SMS-Bestätigung funktioniert? Bitte kontaktieren Sie uns, wenn so.
+warnMaximumOptions;verify the image is not cut in the shared environment;si muestras más de 4 opciones, comprueba que la imagen no quede cortada en el entorno donde la compartas.;Verifique se a imagem não é cortado no ambiente compartilhado;verificare che l'immagine non è tagliato nell'ambiente condiviso;Veuillez vérifier l'image n'est pas coupé dans l'environnement partagé;verify wird das Bild nicht in der gemeinsam genutzten Umgebung abgeschnitten
+e_retrievingData;poll not found, check your internet connection:;encuesta no encontrada, comprueba tu conexión:;Poll não foi encontrado, verifique sua conexão de Internet:;Sondaggio non trovato, controllare la connessione a Internet:;Sondage non trouvé, vérifiez votre connexion Internet:;Umfrage nicht gefunden wird, überprüfen Sie Ihre Internetverbindung:
+loadingPublicKey;Validating the phone number, wait a second and try again..;Validando el número de teléfono, vuelve a intentarlo en unos segundos..;Validando o número de telefone, espere um segundo e tente novamente ..;Convalida il numero di telefono, aspetta un secondo e riprovare ..;Validation du numéro de téléphone, attendez une seconde et essayez à nouveau ..;Validieren der Telefonnummer, warten wieder eine zweite und versuchen ..
+;;;;;;
+//////////////////////////;;;;;;
+//~polls;;;;;;
+PopularPolls;Popular polls:;Encuestas Populares;votações populares:;sondaggi popolari:;sondages populaires:;Beliebte Umfragen:
+total;total;total;total;totale;total;gesamt
+New;New;Nueva;novo;nuovo;nouveau;neu
+search;search;buscar;pesquisa;ricerca;recherche;Suche
+showAll;show all countries;mostrar todos los paises,;mostrar todos os países;Mostra tutti paesi;montrer tous les pays;Zeige alle Länder
+showMine;default;por defecto;omissão;difetto;par défaut;Default
+duplicatedKey;duplicated key;key duplicada;chave duplicada;chiave duplicata;clé dupliquée;nachgemachte Schlüssel
+noPollsFound;not polls found;no se han encontrado encuestas;urnas não encontrado;sondaggi non trovato;sondages non trouvé;Umfragen nicht gefunden
+;;;;;;
+//parse;;;;;;
+forgetPoll;forget this;descartar;esquecer isso;dimenticare questo;oublier;vergessen diese
+UNDO;UNDO;RECUPERAR;UNDO;ANNULLA;UNDO;UNDO
+;;;;;;
+//canvas;;;;;;
+Votes;Votes;Votos;você votos;voi voti;vous votes;Sie Stimmen
+ClickTheLink;Click the link;Dale al link;Clique no link;Clicca sul link;Cliquez sur le lien;Klicken Sie auf den Link
+toVote;to vote!;para votar!;para votar!;a votare!;pour voter!;Ihre Stimme ab!
+;;;;;;
+//premium;;;;;;
+CustomStyles;Default style:;Estilo por defecto:;estilo padrão:;stile predefinito:;Style par défaut:;Standardstil:
+defaults;defaults;por defecto;defaults;default;par défaut;Standardwerte
+Symbol;Symbol;Icono:;símbolo;simbolo;symbole;Symbol
+ChooseFile;[ ];[ ];[];[];[];[]
+QuestionColor;Question color:;Color de pregunta:;pergunta Cor:;domanda Colore:;question Couleur:;Farbe Frage:
+OptionTextColor;Option text color:;Texto de optiones:;cor do texto Opção:;Opzione colore del testo:;Option texte couleur:;Option Textfarbe:
+BackgroundColor;Background color:;Color de fondo:;Cor de fundo:;Colore sfondo:;Couleur de fond:;Hintergrundfarbe:
+GradientBackground;Gradient background:;Fondo de degradado:;Fundo do inclinação:;gradiente di sfondo:;Fond dégradé:;Hintergrund mit Farbverlauf:
+GradientColor1;Gradient color 1:;Color degradado 1:;Gradiente de cor 1:;Sfumatura di colore 1:;Couleur Gradient 1:;Color Gradient 1:
+GradientColor2;Gradient color 2:;Color degradado 2:;Cor Gradiente 2:;Sfumatura di colore 2:;Dégradé de couleur 2:;Color Gradient 2:
+LimitByCountry;Limit by region:;Limitar por región:;Limite por região:;Limite per regione:;Limite par région:;Limit nach Region:
+WillShowPublic;- Public polls will be showed in 'public polls' page.; - Las votaciones públicas se añaden a 'Encuestas Públicas'.;- enquetes públicas será mostrado na página de enquetes públicas .;- i sondaggi pubblici saranno mostrati nella pagina 'sondaggi pubblici.;- Les sondages publics seront Montré dans la page 'sondages publics.;- öffentliche Umfragen werden in ‚öffentlichen Umfragen‘ Seite gezeigt werden.
+ChooseCountry;Choose;Paises;escolher;scegliere;choisir;wählen
+ExampleQuestion;This is a question example \n And this is some extra text;Esta es una pregunta de prueba \n Y esto información extra;Este é um exemplo de questão \n e isso é algum texto adicional;Questo è un esempio domanda \n and questo è un testo aggiuntivo;Ceci est un exemple de question \n and ceci est un texte supplémentaire;Dies ist eine Frage Beispiel \n and dies einige zusätzliche Texte
+OptionExample1;Option example A;Ejemplo de opción A;Um exemplo opção;Opzione A esempio;Option Un exemple;Option A Beispiel
+OptionExample2;Option example B;Ejemplo de opción B;Opção B exemplo;Opzione B esempio;Option B exemple;Option B Beispiel
+ownerNameExample;owner name;nombre usuario;nome do proprietário;nome del proprietario;nom du propriétaire;Name des Eigentümers
+AddPollLink;Add an extra web LINK to this poll;Añade un LINK web para esta encuesta;Adicionar um link extra para esta enquete;Aggiungere un link in più per questo sondaggio;Ajouter un lien web supplémentaire à ce sondage;Fügen Sie einen zusätzlichen Web-Link zu dieser Umfrage
+Public;Public;Público;público;pubblico;public;Öffentlichkeit
+StyleNamePlaceholder;style name;nombre del estilo;nome do estilo;nome dello stile;nom de style;Artnamen
+SaveStyle;Save;Guardar;Guardar;Salva;Enregistrer;Speichern
+Delete;Remove;Eliminar;remover;rimuovere;supprimer;entfernen
+allCountries;any country..;cualquier país..;qualquer país ..;qualsiasi paese ..;tout pays ..;jedes Land ..
+Yes;Yes;Si;sim;sì;oui;ja
+Not;Not;No;não;non;pas;nicht
+cantChangePublic;This poll was already saved. To change Public value, cancel this and make it new.;Esta encuesta ya ha sido guardada. Para cambiar el valor Público, cancela esta y crea una nueva.;Esta sondagem foi já salvos. Para alterar o valor Pública, cancelar esta e torná-lo de novo.;Questo sondaggio è stato già salvato. Per cambiare il valore pubblico, annullare Questo e renderlo di nuovo.;Ce sondage a été déjà enregistré. Pour changer la valeur publique, annuler Ceci et faire de nouveau.;Diese Umfrage wurde bereits gespeichert. Zum öffentlichen Wert zu ändern, stornieren Diese und es neu machen.
+;;;;;;
+//TODO:  errors module;;;;;;
+noUserCountryFound;error: can't retrieve your phone country, please contact us;error: no se ha reconocido la ubicación del número de teléfono, por favor contacta con nosotros;Erro: não é possível recuperar o seu país de telefone, por favor, entre em contato conosco;Errore: non è in grado di recuperare il suo paese telefono, Vi preghiamo di contattarci;Erreur: ne peut pas récupérer votre pays de téléphone, S'il vous plaît contactez-nous;Fehler: kann das Telefon Land nicht abrufen, kontaktieren Sie uns bitte
+p_notEditable;Not available options here.;Sin opciones displonibles aquí.;Nem opções disponíveis aqui.;Non le opzioni disponibili qui.;Pas d'options disponibles ici.;Nicht verfügbar Optionen hier.
+;;;;;;
+//js ERRORS;;;;;;
+e_votationRemoved;sorry, this votation was removed;lo sentimos, esta votación parece haber sido eliminada;Desculpe, este votation foi removido;Siamo spiacenti, questa votazione è stato rimosso;Désolé, a été enlevé Cette votation;Leider wurde votation entfernt
+e_connectionLost;connection lost;se ha perdido la conexión;conexão perdida;connessione persa;connexion perdue;Verbindung verloren
+e_votationWithErrors;sorry, votation have errors. Please contact us.;lo sentimos, votación con errores, Por favor contacta con nosotros.;Desculpe, votation têm erros. Entre em contato conosco.;mi dispiace, votazione hanno errori. Vi preghiamo di contattarci.;désolé, y avoir des erreurs votation. S'il vous plaît nous contacter.;sorry, votation Fehler haben. Bitte kontaktieren Sie uns.
+e_flagNotFound;can't load flag of ;no se ha podido cargar la bandera de ;não pode carregar a bandeira de;non può caricare bandiera;ne peut pas charger de drapeau;Last nicht Flagge
+e_parsingIndexFile;error parsing _index.txt file;error de lectura con el archivo _index.txt;Erro _index.txt arquivo de análise;Errore di analisi del file _index.txt;Erreur d'analyse du fichier _index.txt;Fehler beim Analysieren der Datei _index.txt
+;;;;;;
+//COMMON ERRORS;;;;;;
+e_connection;please, check your internet connection and try it again;por favor, comprueba tu conexión de internet y prueba de nuevo;Por favor, verifique sua conexão de internet e tente novamente;Vi preghiamo di controllare la connessione a Internet e provare di nuovo;S'il vous plaît, vérifiez votre connexion Internet et essayez à nouveau;Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut
+e_publicPolls;no public polls found;no se han encontrado encuestas públicas;nenhuma enquete públicos encontrados;non ci sono sondaggi pubblici trovate;pas de sondages publics trouvés;keine öffentlichen Umfragen gefunden
+;;;;;;
+//DEVICE ERRORS;;;;;;
+e_imageNotFound;error: image not found;error: imagen no encontrada;Erro: imagem não encontrada;Errore: Immagine non trovata;Erreur: image not found;Fehler: Bild nicht gefunden

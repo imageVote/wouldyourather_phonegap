@@ -1,0 +1,264 @@
+
+html{
+    background-color: rgb(40,40,40);
+    color: gainsboro;
+    background: url(../~img/background_pattern.jpg);
+    background-size: 49px;
+}
+html.translucent{
+    /*background: rgba(255,255,255,0.4);*/
+    background: rgba(0,0,0,0.4);
+}
+
+body{
+    background: linear-gradient(transparent 30%, rgba(0,0,0,0.5));
+}
+
+#header .title > *{
+    /*font-family: Fantasy;*/
+    /*font-family: "LeagueGothic", "Fantasy";*/
+    font-family: "LeagueGothic";
+    font-size: 32px;
+}
+
+.option table{
+    height: 86%;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 481px) {
+    .option:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .option.clickable:hover:before{
+        background: rgba(255,255,255,0.1);
+    }
+}
+
+.option textarea{
+    width: 100%;
+}
+
+#creator #showPolls, #creator textarea, #creator input{
+    background-color: transparent;
+}
+#showPolls{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.option{
+    color: white;
+    text-align: center;
+    font-family: "LeagueGothic";
+    font-size: 22px;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: text;
+
+    height: 100%;
+    width: 49%;
+    display: inline-block;
+    margin: 0 0.5%;
+
+    /*this breaks word only if only 1 large word like 'aaa+bbb+ccc'*/
+    word-break: break-word;
+    /*text-shadow: 1px 1px rgba(0,0,0,0.5);*/
+    text-shadow: 1px 1px rgb(70,70,70);
+
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.35), inset 1px 1px 0 rgba(255,255,255,0.35), 0 3px 6px black;
+    cursor: pointer;
+    /*prevent wrong touch area (like overflowing margin symbols inside)*/
+    overflow: hidden;
+}
+.option.clickable:hover{
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.35), inset 1px 1px 0 rgba(255,255,255,0.35), 3px 6px 12px black;
+}
+
+.option div:focus{
+    outline: none;
+}
+
+.creator_title{
+    display: none;
+    font-family: LeagueGothic;
+    font-size: 32px;
+    text-align: center;
+    line-height: 50px; 
+    text-shadow: 1px 1px black;
+}
+.translucent .creator_title{
+    display: block;
+}
+
+.checked{
+    box-shadow: 0 0 0 2px yellow, 1px 1px 0 rgba(0,0,0,0.35), inset 1px 1px 0 rgba(255,255,255,0.35), 0 3px 6px black !important;
+}
+.checked.clickable:hover{
+    box-shadow: 0 0 0 2px yellow, 1px 1px 0 rgba(0,0,0,0.35), inset 1px 1px 0 rgba(255,255,255,0.35), 3px 6px 12px black !important;
+}
+
+.results{
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition:all 200ms;
+    transition: all 200ms;
+}
+#creator:not(.show) .results, .options_container:not(.show) .results{
+    font-size: 6px !important;
+    opacity: 0;
+}
+#createPoll{
+    color:rgb(180,180,180);
+}
+
+#stored .percentage_container, #stored .votes_container{
+    font-size: 0 !important;
+}
+.percentage_container{
+    color: yellow;
+}
+.votes_container{
+    color: gainsboro;
+}
+.show .percentage_container, .show .votes_container{
+    opacity: 1;
+}
+
+.background{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;    
+    margin: 0 !important;
+    height: 0;
+    pointer-events: none;
+
+    /*background-color: rgba(255,255,255,0.2);*/
+    background-color: rgba(0,0,0,0.1);
+
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition:all 200ms;
+    transition: all 200ms;
+}
+@media screen and (min-width: 481px) {
+    background: -webkit-linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.05));
+    background: -o-linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.05));
+    background: -moz-linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.05));
+    background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.05));
+}
+
+.votation, .stored{
+    position: relative;
+    padding-bottom: 38%;
+    height: 0;
+}
+.options{
+    height: 100%;
+    width: 100%;
+}
+.options_container{
+    position: absolute;    
+    left: -1%;
+    bottom: 0;
+    right: -1%;
+    /*allow box-shadow margin*/
+    top: 3px;
+}
+
+.votationButtons{
+    text-align: right;
+    position: relative;
+}
+
+#errorLog{
+    color: rgba(255,255,255,0.5);
+}
+
+.votationButtons button, #users button, #pollsPageContainer button, .votationButtons .button, #users .button, #pollsPageContainer .button{
+    background: transparent;
+    color: #fff;
+    border-style: none;
+    outline: none;
+}
+.votationButtons button:hover, #users button:hover, #pollsPageContainer button:hover, .votationButtons .button:hover, #users .button:hover, #pollsPageContainer .button:hover{
+    background: rgba(255,255,255,0.12);
+}
+#users button{
+    font-weight: bold;
+}
+
+#cancel{
+    float: left;
+}
+
+#flash{
+    color: black;
+    padding: 8px 15px;
+
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(70,70,70);
+    /*box-shadow: 0 0 1px rgb(80,80,80);*/
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+@media screen and (min-width: 481px) {    
+    background-color: rgba(255,255,255,0.8) !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
+}
+
+/*modal box*/
+#modal_box{
+    background: rgba(180,180,180,0.5);
+}
+#modal_box > div {    
+    background: rgba(255,255,255,0.87); /*in android is mnore transparent!*/
+    color: black !important;
+    text-shadow: 1px 1px rgba(255,255,255,0.5);
+    border: 1px solid black;
+}
+#modal_box > div p{
+    text-shadow: 1px 1px rgba(255,255,255,0.5);
+}
+#modal_box button {
+    background: rgba(0,0,0,0.08);
+    color: black;
+    border: none;
+    font-size: 16px;
+}
+#modal_box small {
+    color: rgb(40,40,40);
+}
+
+.option_text{
+    font-size: 3.4vw; /*40*/
+}
+.show .percentage_container{
+    font-size: 3.9vw; /*46*/
+}
+.show .votes_container{
+    font-size: 2.5vw; /*29*/
+}
+
+.polls_emptyLanguage{
+    position:absolute; 
+    text-align:center; 
+    top:10px; 
+    width:100%
+}
+
+.publicCheckbox.publicCheck{
+    opacity: 1;
+    color: gold !important;
+}

@@ -1,0 +1,48 @@
+
+<!--load polls.css here to prevent bad rendering on load-->
+<link rel="stylesheet" type="text/css" href="~commons/modules/polls/polls.css">
+
+<link rel="stylesheet" type="text/css" href="~modules/polls/polls.css">
+<!--<script type="text/javascript" src="~commons/modules/polls/Polls_extend.js"></script>-->
+<script type="text/javascript" src="~modules/polls/GamePoll.js"></script>
+
+<!--<div id="polls_custom"></div>-->
+
+<script>
+
+    //$("#polls_custom").load();
+
+    if (location.hash == "#polls") {
+        pollsView();
+    }
+
+    window.hashManager.list.polls = function () {
+        //$("html").removeClass("withoutHeader");
+        $("#pollsHeader").hide();
+        $("#voteHeader").show();
+
+        pollsView();
+    };
+
+    function pollsView() {
+        console.log("pollsView()");
+        $("#body").addClass("pollsView");
+        $("#voteHeader").hide();
+        $("#pollsHeader").show();
+        
+        //RELOAD ALLWAYS FOR LANGUAGE CHANGE CASE!
+        
+        //IF PARSE LANGUAGES:
+        var parseLanguages = ["en", "es", "fr", "de", "it", "pt"];
+        var lang = localStorage.getItem("userLang");
+        
+        var parse = true;
+        if (lang && parseLanguages.indexOf(lang.toLowerCase()) === -1) { //call toLowerCase only if exists!
+            parse = false;
+        }
+        window.gamePoll = new GamePoll("#pollsPage", null, parse); //game
+
+        loaded();
+    }
+
+</script>

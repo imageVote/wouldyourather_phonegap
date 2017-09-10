@@ -1,0 +1,67 @@
+
+<link rel="stylesheet" type="text/css" href="~modules/tutorial/tutorial_custom.css">
+
+<div id="custom_tutorial" class="tutorial"></div>
+
+<script>
+
+    $("#custom_tutorial").load("~commons/modules/tutorial/tutorial.html", function () {
+
+        translate.loadLanguage("~modules/tutorial/", "#custom_tutorial", function () {
+            //loadTranslations();
+            new Tutorial(tutorial_help, "#custom_tutorial");
+        });
+
+        var tutorial_help = [
+            //
+            [null, "help_welcome", null, null,
+                "<img style='width:100%; opacity:0.7; margin-bottom:-20px; margin-top:10px; max-width:320px;' src='~modules/tutorial/share.png'>"]
+                    ,
+            ["#creator .option_0", "help_first", function (event) {
+                    location.hash = "home";
+
+                    var query = "#creator .option_0 .option_text";
+                    $("body").on("keyup.help_first", query, function () {
+                        if ($(this).text().length > 2) {
+                            $("body").off(".help_first");
+                            event();
+                        }
+                    });
+                }]
+                    ,
+            ["#creator .option_1", "help_second", function (event) {
+                    var query = "#creator .option_1 .option_text";
+                    $("body").on("keyup.help_second", query, function () {
+                        if ($(this).text().length > 2) {
+                            $("body").off(".help_second");
+                            event();
+                        }
+                    });
+                }]
+                    ,
+            //PREVENT SHARE:
+//            ["#send", "help_share", function (event) {//                    
+//                    $("#send").one("touchstart mousedown", function (e) {
+//                        e.stopPropagation(); //prevent click event on send button
+//                        e.preventDefault(); //prevent click next button
+//                        $("#send").removeClass("tutorial_selectable");
+//                        event();
+//                    });
+//                }]
+            ["#send", "help_share", "#send"]
+                    ,
+            [null, "help_shareDone"]
+                    ,
+            [null, "help_playFunctionality"]
+                    ,
+            ["#toPolls", "help_play", "#toPolls", function (event) {
+                    //
+                }]
+                    ,
+            [null, "help_playScreen"]
+                    ,
+            [null, "help_end"]
+        ];
+    });
+
+</script>

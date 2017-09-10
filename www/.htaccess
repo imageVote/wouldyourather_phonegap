@@ -1,0 +1,19 @@
+RewriteEngine on
+
+# NEVER DO THIS, IT'S SO DANGEROUS:
+#RewriteCond %{HTTP_USER_AGENT} "android" [NC]
+#RewriteRule ^(.*)$ https://play.google.com/store/apps/details?id=<at.PACKAGE> [L,QSA]
+
+RewriteRule ^nbproject(/|/.+)?$ /?nbproject [L]
+
+# define "%{ENV:BASE}"
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+
+# if not key remote file http-post
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# prevent redirect subfolders ($1 means: all after this path in url)
+RewriteCond $1 !^.*/.*
+RewriteRule ^(.*)$ %{ENV:BASE} [L,NC]

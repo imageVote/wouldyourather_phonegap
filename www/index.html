@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Would You Rather</title>
+
+        <script type="text/javascript" src="~commons/libs/pushstate-anchor.js"></script>
+        <script type="text/javascript" src="~commons/libs/requirejs/require.js"></script>        
+
+        <script>
+
+            require.config({
+                waitSeconds: 0, //prevent timeout by requirejs
+                paths: {
+                    // Major libraries
+                    jquery: '~commons/libs/jquery-1.11.0.min', //jquery.mobile.events.min.js calls this (prevent bug)
+                    /*underscore: 'libs/underscore/underscore-min', // https://github.com/amdjs
+                     backbone: 'libs/backbone/backbone-min', // https://github.com/amdjs*/
+                    // Require.js plugins
+                    text: '~commons/libs/requirejs/text',
+                    propertyParser: '~commons/libs/requirejs/propertyParser', //font plugin needed!
+                    font: '~commons/libs/requirejs/font',
+                    css: '~commons/libs/requirejs/css.min'
+                }
+            });
+
+            (function () {
+                var lib_require = [
+                    "text!~commons/index_commons.html",
+                    "jquery",
+                    "~commons/libs/jquery.mobile.events.min.js",
+                    "~commons/libs/modernizr-touch.js"
+                ];
+
+                //android analyticstracking lib
+//                var ua = navigator.userAgent.toLowerCase();
+//                if (!(window.Device && ua.indexOf("android") > -1)) {
+//                    lib_require.push("~commons/libs/analyticstracking.js");
+//                }
+
+                //start
+                require(lib_require, function (commons) {
+//                    $.ajaxSetup({
+////                        type: 'POST',
+////                        headers: {"cache-control": "no-cache"}
+//                        cache: false
+//                    });
+                    $("body").html(commons);
+
+                    //w8 common dependencies
+                    require(["text!index_custom.html", "commons_dependencies"], function (custom) {
+                        $("#body").html(custom);
+                        require(["custom_dependencies"], function () {
+                            document_ready();
+
+                            setTimeout(function () {
+                                $("body").css("display", "inherit"); //w8 translations, etc..
+                            }, 1);
+
+                        }, function (err) {
+                            console.log(err.requireType);
+                            console.log('ERROR custom_dependencies MODULES ' + err.requireModules);
+                        });
+
+                    }, function (err) {
+                        console.log(err.requireType);
+                        console.log('ERROR commons_dependencies MODULES ' + err.requireModules);
+                    });
+
+                }, function (err) {
+                    console.log(err.requireType);
+                    console.log('ERROR libs and commons MODULES ' + err.requireModules);
+                });
+            })();
+
+        </script>
+    </head>
+
+    <body style="display: none"></body>
+
+</html>

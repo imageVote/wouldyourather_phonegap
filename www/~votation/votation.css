@@ -1,0 +1,36 @@
+
+#votation .options{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+#votation .options input{
+    vertical-align: sub;
+}
+
+#votationOwner{
+    font-size: 15px;
+    margin: 5px 0;
+    color: rgb(50,50,50);
+}
+#votationOwner .by{
+    color: grey;
+    font-size: 14px;
+}
+
+/*#defaultButtons > *{
+    margin-bottom: 10px;
+}*/
+#defaultButtons input[type="text"]{
+    padding: 0 8px;
+    background-color: rgb(235,235,235);
+    color: rgb(99,99,99);
+}
+
+.modal_input input{
+    margin-bottom: 10px;
+    border: 1px solid rgb(180,180,180);
+}
+
+.modal_input input:focus{
+    background-color: rgb(255,255,225) !important;
+}

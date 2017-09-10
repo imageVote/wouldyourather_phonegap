@@ -1,0 +1,9 @@
+
+@media screen and (min-width: 1024px) {
+    
+    .votationBox, #pollsPage .gameContainer{
+        padding-bottom: 30% !important;
+    }
+
+}
+
